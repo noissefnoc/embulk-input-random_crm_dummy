@@ -31,6 +31,8 @@ Random CRM data generator for [Embulk](https://github.com/embulk/embulk). Expect
     - **type: double**
         - return random double value. (config with `dummy` option, specific formatted double value such as latitude and longitude)
         - **dummy**: latitude or longitude (string)
+        - **before_point**: place before the decimal point
+        - **after_point**: place after the decimal point
     - **type: long**
         - return random long value
         - **from**: minimum of return value (long, default: `0`)
