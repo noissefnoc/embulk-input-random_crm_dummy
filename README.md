@@ -2,14 +2,13 @@
 
 **WARNING: THIS IS VERY ALPHA VERSION. API OR CONFIGURATION COULD CHANGE.**
 
-Random CRM data generator for [Embulk](https://github.com/embulk/embulk). Expected to used to test or benchmark.
-
-This plugin currently uses [Faker](https://github.com/stympy/faker) so this plugin supports i18n partially. 
+Random CRM data generator for [Embulk](https://github.com/embulk/embulk). Expected to used to test or benchmark. 
 
 
 ### NOTE
 
 - This plugin hasn't released rubygemns yet because this is alpha version.
+- This plugin currently uses [Faker](https://github.com/stympy/faker) so this plugin supports i18n partially.
 
 ## Overview
 
@@ -20,7 +19,7 @@ This plugin currently uses [Faker](https://github.com/stympy/faker) so this plug
 
 ## Configuration
 
-- **locale**: description (string, default: `"en"`)
+- **locale**: description (string, default: `"en"` acceptable locale: [stympy/faker - locales](https://github.com/stympy/faker/tree/master/lib/locales).)
 - **rows**: number of inserting rows (long, default: `10`)
 - **threads**: number of threads (long, default: `1`)
 - **columns**: description (array, required)
