@@ -6,7 +6,7 @@ in:
     - {name: BillingState,           type: string,    dummy: state}
     - {name: Description,            type: string,    default: 'This is default string.'}
     - {name: Industry,               type: string,    dummy: list, label: ['manufacture', 'financial']}
-    - {name: IsDeleted,              type: boolean,   true_rate: 0.9}
+    - {name: IsDeleted,              type: boolean,   true_ratio: 0.9}
     - {name: DeleteDatetime,         type: timestamp, from: '2017-01-01', to: '2017-12-31'}
 out:
   type: stdout
