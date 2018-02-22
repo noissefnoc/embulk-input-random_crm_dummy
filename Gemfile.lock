@@ -1,0 +1,35 @@
+PATH
+  remote: .
+  specs:
+    embulk-input-random_crm_dummy (0.1.0)
+      faker (>= 1.8.7)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.0.5-java)
+    embulk (0.8.39-java)
+      bundler (>= 1.10.6)
+      liquid (~> 4.0.0)
+      msgpack (~> 1.1.0)
+      rjack-icu (~> 4.54.1.1)
+    faker (1.8.7)
+      i18n (>= 0.7)
+    i18n (1.0.0)
+      concurrent-ruby (~> 1.0)
+    liquid (4.0.0)
+    msgpack (1.1.0-java)
+    rake (12.3.0)
+    rjack-icu (4.54.1.1-java)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  bundler (>= 1.10.6)
+  embulk (>= 0.8.39)
+  embulk-input-random_crm_dummy!
+  rake (>= 10.0)
+
+BUNDLED WITH
+   1.16.1

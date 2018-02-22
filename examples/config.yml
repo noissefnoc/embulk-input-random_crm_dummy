@@ -1,0 +1,12 @@
+in:
+  type: random_crm_dummy
+  columns:
+    - {name: AccountSource,          type: string,    dummy: list, label: ['Ad', 'Data.com']}
+    - {name: AnnualRevenue,          type: long,      from: 0, to: 10000000000}
+    - {name: BillingState,           type: string,    dummy: state}
+    - {name: Description,            type: string,    default_string: 'This is default string.'}
+    - {name: Industry,               type: string,    dummy: list, label: ['manufacture', 'financial']}
+    - {name: IsDeleted,              type: boolean,   true_rate: 0.9}
+    - {name: DeleteDatetime,         type: timestamp, from: '2017-01-01', to: '2017-12-31'}
+out:
+  type: stdout

@@ -1,0 +1,27 @@
+in:
+  type: random_crm_dummy
+  locale: ja
+  columns:
+    - {name: AccountSource,          type: string,  dummy: list, label: ['広告', 'Data.com', '展示会']}
+    - {name: AnnualRevenue,          type: long,    from: 0, to: 10000000000}
+    - {name: BillingCity,            type: string,  dummy: city}
+    - {name: BillingCountry,         type: string,  dummy: country}
+    - {name: BillingLatitude,        type: double,  dummy: latitude}
+    - {name: BillingLongitude,       type: double,  dummy: longitude}
+    - {name: BillingPostalCode,      type: string,  dummy: postal_code}
+    - {name: BillingState,           type: string,  dummy: state}
+    - {name: BillingStreet,          type: string,  dummy: street}
+    - {name: CustomerId,             type: string,  dummy: uuid}
+    - {name: Description,            type: string}
+    - {name: Email,                  type: string,  dummy: email}
+    - {name: Fax,                    type: string,  dummy: phone_number}
+    - {name: Industry,               type: string,  dummy: list, label: ['製造', '金融', '官公庁']}
+    - {name: IsDeleted,              type: boolean, true_rate: 0.9}
+    - {name: Name,                   type: string,  dummy: full_name}
+    - {name: NumberOfEmployees,      type: long,    from: 7, to: 10000}
+    - {name: OwnerShip,              type: string,  dummy: list, label: ['非公開', '公開', '子会社']}
+    - {name: Phone,                  type: string,  dummy: phone_number}
+    - {name: Rating,                 type: string,  dummy: list, label: ['見込みあり', '将来見込みあり', '見込みなし']}
+    - {name: Website,                type: string,  dummy: url}
+out:
+  type: stdout
