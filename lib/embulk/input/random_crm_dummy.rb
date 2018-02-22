@@ -23,7 +23,7 @@ module Embulk
           name = column['name']
           type = column['type'].to_sym
 
-          columns << Column.new(nil, name, type, column[:format])
+          columns << Column.new(nil, name, type, column['format'])
         end
 
         resume(task, columns, 1, &control)
