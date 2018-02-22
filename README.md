@@ -35,7 +35,7 @@ Random CRM data generator for [Embulk](https://github.com/embulk/embulk). Expect
         - **to**: maximum of return value (long, default: `1000000`) 
     - **type: string**
         - return random string value (config with `dummy` option,  specific formatted string value such as phone number, email etc.)
-        - **default_string**: default return string value without `dummy` option (string, default: `This is dummy data.`)
+        - **default**: default return string value without `dummy` option (string, default: `This is dummy data.`)
         - **dummy**: phone number, postal code etc. for more detail see `List of string dummy options` below.
     - **type: timestamp**
         - return random timestamp value
@@ -78,16 +78,16 @@ out:
 and gets
 
 ```
-Ad,9195935569,Michigan,This is dummy data.,manufacture,true,2017-04-13 15:00:00.000000 +0000
-Data.com,6110160353,Hawaii,This is dummy data.,manufacture,true,2017-06-30 15:00:00.000000 +0000
-Data.com,4873260403,Maine,This is dummy data.,financial,true,2017-01-11 15:00:00.000000 +0000
-Data.com,8622017200,Texas,This is dummy data.,manufacture,true,2017-03-18 15:00:00.000000 +0000
-Data.com,3609970466,Indiana,This is dummy data.,manufacture,true,2017-08-01 15:00:00.000000 +0000
-Ad,4350410797,Texas,This is dummy data.,manufacture,true,2017-11-24 15:00:00.000000 +0000
-Data.com,3754324539,Nebraska,This is dummy data.,manufacture,true,2017-04-10 15:00:00.000000 +0000
-Ad,2601417435,Idaho,This is dummy data.,financial,true,2017-07-02 15:00:00.000000 +0000
-Ad,822221282,Idaho,This is dummy data.,financial,true,2017-05-28 15:00:00.000000 +0000
-Ad,8746025237,California,This is dummy data.,manufacture,false,2017-08-19 15:00:00.000000 +0000
+Ad,7206991348,Hawaii,This is default string.,financial,true,2017-09-30 15:00:00.000000 +0000
+Ad,9434694520,Colorado,This is default string.,manufacture,true,2017-01-23 15:00:00.000000 +0000
+Ad,9303439532,Oregon,This is default string.,financial,true,2017-06-01 15:00:00.000000 +0000
+Data.com,5443621215,South Dakota,This is default string.,manufacture,true,2017-06-19 15:00:00.000000 +0000
+Data.com,7653675596,Kansas,This is default string.,financial,true,2017-10-08 15:00:00.000000 +0000
+Ad,3533962671,Oregon,This is default string.,financial,true,2017-02-01 15:00:00.000000 +0000
+Data.com,6641817856,California,This is default string.,financial,true,2017-04-01 15:00:00.000000 +0000
+Data.com,4558029927,Colorado,This is default string.,manufacture,true,2017-12-08 15:00:00.000000 +0000
+Data.com,9341647144,Arizona,This is default string.,financial,true,2017-10-12 15:00:00.000000 +0000
+Ad,3732589682,New Jersey,This is default string.,financial,true,2017-08-01 15:00:00.000000 +0000
 ```
 
 For more example, please see [examples folder](https://github.com/noissefnoc/embulk-input-random_crm_dummy/tree/master/examples).
