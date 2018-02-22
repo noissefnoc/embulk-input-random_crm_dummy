@@ -1,5 +1,7 @@
 # Random CRM data generator by Embulk Input plugin
 
+[![Build Status](https://travis-ci.org/noissefnoc/embulk-input-random_crm_dummy.svg?branch=master)](https://travis-ci.org/noissefnoc/embulk-input-random_crm_dummy)
+
 **WARNING: THIS IS VERY ALPHA VERSION. API OR CONFIGURATION COULD CHANGE.**
 
 Random CRM data generator for [Embulk](https://github.com/embulk/embulk). Expected to used to test or benchmark. 
