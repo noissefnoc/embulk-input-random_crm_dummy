@@ -6,14 +6,18 @@ module Embulk
   module Input
     module RandomCrmDummyInputPluginUtils
 
+      DEFAULT_TRUE_RATIO = '0.5'
       MIN_LONG_VALUE = 0
       MAX_LONG_VALUE = 10000
+      BEFORE_POINT  = 4
+      AFTER_POINT   = 2
       FROM_DATE_STR = '1970-01-01'
       DATE_FORMAT = '%Y-%m-%d'
+      DEFAULT_STRING = 'This is dummy data.'
 
       def self.generate_dummy_boolean(config)
-        true_rate = config.fetch('true_rate', '0.5').to_f
-        Faker::Boolean.boolean(true_rate)
+        true_ratio = config.fetch('true_ratio', DEFAULT_TRUE_RATIO).to_f
+        Faker::Boolean.boolean(true_ratio)
       end
 
       def self.generate_dummy_double(config)
@@ -29,10 +33,10 @@ module Embulk
               raise ConfigError.new "unsupported or unimplemented Faker type double: #{type}"
           end
         else
-          from = config.fetch('from', MIN_LONG_VALUE)
-          to = config.fetch('to', MAX_LONG_VALUE)
+          before_point = config.fetch('before_point', BEFORE_POINT)
+          after_point = config.fetch('after_point', AFTER_POINT)
 
-          Faker::Number.positive(from, to)
+          Faker::Number.decimal(before_point, after_point)
         end
       end
 
@@ -47,7 +51,7 @@ module Embulk
         if config.has_key?('dummy')
           dummy_string = string_type_to_dummy(config)
         else
-          dummy_string = config.fetch('default', 'This is dummy data.')
+          dummy_string = config.fetch('default', DEFAULT_STRING)
         end
 
         dummy_string

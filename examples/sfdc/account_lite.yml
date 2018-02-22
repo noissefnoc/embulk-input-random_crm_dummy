@@ -16,7 +16,7 @@ in:
     - {name: Email,                  type: string,  dummy: email}
     - {name: Fax,                    type: string,  dummy: phone_number}
     - {name: Industry,               type: string,  dummy: list, label: ['製造', '金融', '官公庁']}
-    - {name: IsDeleted,              type: boolean, true_rate: 0.9}
+    - {name: IsDeleted,              type: boolean, true_ratio: 0.9}
     - {name: Name,                   type: string,  dummy: full_name}
     - {name: NumberOfEmployees,      type: long,    from: 7, to: 10000}
     - {name: OwnerShip,              type: string,  dummy: list, label: ['非公開', '公開', '子会社']}
