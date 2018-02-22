@@ -8,19 +8,34 @@ GEM
   remote: https://rubygems.org/
   specs:
     concurrent-ruby (1.0.5-java)
+    docile (1.1.5)
     embulk (0.8.39-java)
       bundler (>= 1.10.6)
       liquid (~> 4.0.0)
       msgpack (~> 1.1.0)
       rjack-icu (~> 4.54.1.1)
+    everyleaf-embulk_helper (0.0.6)
     faker (1.8.7)
       i18n (>= 0.7)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
+    json (2.1.0-java)
     liquid (4.0.0)
     msgpack (1.1.0-java)
+    power_assert (1.1.1)
     rake (12.3.0)
     rjack-icu (4.54.1.1-java)
+    rr (1.2.1)
+    simplecov (0.15.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    test-unit (3.2.7)
+      power_assert
+    test-unit-rr (1.0.5)
+      rr (>= 1.1.1)
+      test-unit (>= 2.5.2)
 
 PLATFORMS
   java
@@ -29,7 +44,12 @@ DEPENDENCIES
   bundler (>= 1.10.6)
   embulk (>= 0.8.39)
   embulk-input-random_crm_dummy!
+  everyleaf-embulk_helper
   rake (>= 10.0)
+  rr
+  simplecov
+  test-unit
+  test-unit-rr
 
 BUNDLED WITH
    1.16.1
