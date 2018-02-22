@@ -1,3 +1,26 @@
 language: ruby
+
+jdk: oraclejdk8
+
 rvm:
-  - jruby
+  - jruby-9.1.13.0
+
+script: bundle exec rake cov
+
+gemfile:
+  - gemfiles/embulk-0.8.0-latest
+  - gemfiles/embulk-0.8.39
+  - gemfiles/embulk-0.9.0-latest
+  - gemfiles/embulk-latest
+
+matfix:
+  exclude:
+    - jdk: oraclejdk8
+  include:
+    - {rvm: jruby-9.0.0.0, gemfile: gemfiles/embulk-0.8.0-latest}
+    - {rvm: jruby-9.0.0.0, gemfile: gemfiles/embulk-0.8.39}
+    - {rvm: jruby-9.0.0.0, gemfile: gemfiles/embulk-0.9.0-latest}
+    - {rvm: jruby-9.0.0.0, gemfile: gemfiles/embulk-latest}
+  allow_failures:
+    - gemfile: gemfiles/embulk-0.9.0-latest
+    - gemfile: gemfiles/embulk-latest
