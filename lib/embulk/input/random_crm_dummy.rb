@@ -2,7 +2,6 @@ require 'embulk/input/random_crm_dummy_input_plugin_utils'
 
 module Embulk
   module Input
-
     class RandomCrmDummy < InputPlugin
       Plugin.register_input('random_crm_dummy', self)
 
@@ -33,14 +32,14 @@ module Embulk
         task_reports = yield(task, columns, count)
 
         next_diff_config = {}
-        return next_diff_config
+        next_diff_config
       end
 
       def init
         # initialization code:
         @schema = task[:schema]
         @rows_per_threads = task[:rows].div(task[:threads])
-        RandomCrmDummyInputPluginUtils.set_locale(task[:locale])
+        RandomCrmDummyInputPluginUtils.locale(task[:locale])
       end
 
       def run
@@ -54,32 +53,29 @@ module Embulk
         page_builder.finish
 
         task_report = {}
-        return task_report
+        task_report
       end
 
-
       def schema_to_record(schema)
-        schema.collect {|config|
+        schema.collect do |config|
           type = config['type']
 
           case type
-            when 'boolean'
-              RandomCrmDummyInputPluginUtils.generate_dummy_boolean(config)
-            when 'double'
-              RandomCrmDummyInputPluginUtils.generate_dummy_double(config)
-            when 'long'
-              RandomCrmDummyInputPluginUtils.generate_dummy_long(config)
-            when 'string'
-              RandomCrmDummyInputPluginUtils.generate_dummy_string(config)
-            when 'timestamp'
-              RandomCrmDummyInputPluginUtils.generate_dummy_timestamp(config)
-            else
-              raise "unknown type: #{type}"
+          when 'boolean'
+            RandomCrmDummyInputPluginUtils.generate_dummy_boolean(config)
+          when 'double'
+            RandomCrmDummyInputPluginUtils.generate_dummy_double(config)
+          when 'long'
+            RandomCrmDummyInputPluginUtils.generate_dummy_long(config)
+          when 'string'
+            RandomCrmDummyInputPluginUtils.generate_dummy_string(config)
+          when 'timestamp'
+            RandomCrmDummyInputPluginUtils.generate_dummy_timestamp(config)
+          else
+            raise "unknown type: #{type}"
           end
-        }
+        end
       end
-
     end
-
   end
 end
