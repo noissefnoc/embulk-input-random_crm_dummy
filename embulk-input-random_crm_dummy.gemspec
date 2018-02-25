@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Loads records from Crm Dummy."
   spec.email         = ["noissefnoc@gmail.com"]
   spec.licenses      = ["MIT"]
-  # TODO set this: spec.homepage      = "https://github.com/noissefnoc/embulk-input-crm_dummy"
+  spec.homepage      = "https://github.com/noissefnoc/embulk-input-crm_dummy"
 
   spec.files         = `git ls-files`.split("\n") + Dir["classpath/*.jar"]
   spec.test_files    = spec.files.grep(%r{^(test|spec)/})
