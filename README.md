@@ -1,6 +1,9 @@
 # Random CRM data generator by Embulk Input plugin
 
 [![Build Status](https://travis-ci.org/noissefnoc/embulk-input-random_crm_dummy.svg?branch=master)](https://travis-ci.org/noissefnoc/embulk-input-random_crm_dummy)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
+
+[license]: https://github.com/noissefnoc/embulk-input-random_crm_dummy/blob/master/LICENSE.txt
 
 **WARNING: THIS IS VERY ALPHA VERSION. API OR CONFIGURATION COULD CHANGE.**
 
