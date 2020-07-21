@@ -13,14 +13,14 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'faker', ['>=1.8.7']
+  spec.add_dependency 'faker', ['=1.8.7']
 
   spec.add_development_dependency 'embulk', ['>= 0.8.39']
   spec.add_development_dependency 'bundler', ['>= 1.10.6']
-  spec.add_development_dependency 'rake', ['>= 10.0']
+  spec.add_development_dependency 'rake', ['>= 12.3.3']
   spec.add_development_dependency 'test-unit'
   spec.add_development_dependency 'test-unit-rr'
   spec.add_development_dependency 'rr'
-  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'simplecov', ['<= 0.16.1']
   spec.add_development_dependency 'everyleaf-embulk_helper'
 end
